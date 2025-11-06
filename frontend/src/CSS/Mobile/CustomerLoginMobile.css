@@ -1,0 +1,67 @@
+.AuthPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background:
+        linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('../../assets/Background.jpg') no-repeat center center;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.AuthPage .ant-card {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+}
+
+.AuthPage .adm-input {
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 1rem;
+}
+
+.AuthPage .adm-button {
+    font-size: 1rem;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+.AuthPage .ant-card-header {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.AuthPage .subtext {
+    color: #888;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.AuthPage .adm-button-link {
+    padding: 0;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 576px) {
+    .AuthPage .ant-card {
+        padding: 12px;
+    }
+
+    .AuthPage .ant-card-header {
+        font-size: 1.3rem;
+    }
+
+    .AuthPage .adm-button {
+        font-size: 0.95rem;
+    }
+
+}

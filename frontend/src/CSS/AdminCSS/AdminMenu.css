@@ -1,0 +1,128 @@
+.admin-menu-container {
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.image-hover-container {
+  position: relative;
+  display: inline-block;
+}
+.image-hover-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.image-hover-preview {
+  display: none;
+  position: absolute;
+  top: -10px;
+  left: 70px;
+  width: 200px;
+  z-index: 100;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.image-hover-container:hover .image-hover-preview {
+  display: block;
+}
+
+.export-btn {
+  font-size: 14px !important;
+  height: 36px !important;
+  padding: 0 16px !important;
+  white-space: nowrap !important;
+}
+
+.low-stock-row {
+  background-color: #fff1f0;
+}
+.low-stock-cell {
+  font-weight: 500;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.responsive-table-container {
+  width: 100%;
+}
+
+.ant-table-wrapper .ant-table table {
+  table-layout: fixed;
+  width: 100%;
+}
+.ant-table-cell {
+  white-space: normal !important;
+  word-break: break-word !important;
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+.add-stock-group {
+  --ctl-h: 36px; 
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: nowrap;
+}
+
+.add-stock-group .ant-input,
+.add-stock-group .ant-btn {
+  height: var(--ctl-h) !important;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.add-stock-group .ant-input {
+  width: auto !important;
+  min-width: 3ch !important; 
+  max-width: 8ch;   
+  padding: 0 10px;
+  text-align: center;
+  line-height: var(--ctl-h);  
+}
+
+.add-stock-group .ant-btn {
+  min-width: 36px !important;
+  padding: 0 10px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-stock-group .ant-btn > span {
+  line-height: 1; 
+}
+
+.ant-card-head-title {
+  white-space: normal;
+  line-height: 1.2;
+}
+
+@media (max-width: 1600px) {
+  .admin-menu-container { font-size: 15px; }
+  .ant-table-cell { font-size: 13px; }
+}
+
+@media (max-width: 1366px) {
+  .admin-menu-container { font-size: 14px; }
+  .ant-table-cell { font-size: 12px; }
+  .add-stock-group .ant-input { font-size: 15px; }
+}
+
+@media (max-width: 1279px) {
+  .admin-menu-container { font-size: 13px; }
+  .ant-table-cell { font-size: 12px; }
+}
+
+@media (max-width: 768px) {
+  .admin-menu-container { font-size: 12px; }
+  .ant-table-cell { font-size: 11px; }
+  .ant-card-head-title { font-size: 13px !important; }
+}

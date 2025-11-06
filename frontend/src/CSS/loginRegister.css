@@ -1,0 +1,122 @@
+.AuthPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background:
+     linear-gradient(to bottom right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+     url('../assets/Background.jpg') no-repeat center center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.AuthPage h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.AuthPage h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.AuthPage input {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.AuthPage button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.ant-btn-primary:hover {
+    background-color: #0056b3 !important;
+}
+
+.AuthPage .error {
+    color: red;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.AuthPage .success {
+    color: green;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.register-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.register-button-container button {
+    background-color: #28a745;
+    color: white;
+    font-weight: 500;
+}
+
+.register-button-container button:hover {
+    background-color: #218838;
+}
+
+.exit-button-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.exit-button-container button {
+    background-color: #dc3545;
+    color: white;
+    font-weight: 500;
+}
+
+.exit-button-container button:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 576px) {
+    .AuthPage h1 {
+        font-size: 1.6rem;
+    }
+
+    .AuthPage h2 {
+        font-size: 1.2rem;
+    }
+
+    .AuthPage input {
+        max-width: 100%;
+    }
+
+    .register-button-container,
+    .exit-button-container {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .register-button-container button,
+    .exit-button-container button {
+        width: 100%;
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+.navbar {
+    background-color: hsl(0, 0%, 20%);
+    overflow: hidden;
+    padding: 10px 20px;
+}
+
+.navbar h1 {
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 10px;
+}
+
+.navbar .nav-btn:hover {
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 5px;
+}
+
+.nav-button{
+    display: flex;
+    gap: 15px;
+}
+
+.nav-btn{
+    background-color: hsl(0, 0%, 20%);
+    color:white;
+    border:none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}

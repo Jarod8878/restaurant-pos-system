@@ -1,0 +1,15 @@
+.order-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+}
+
+.order-info {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.order-history-wrapper {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}

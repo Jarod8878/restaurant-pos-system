@@ -1,0 +1,176 @@
+/* ✅ General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex-grow: 1;
+}
+
+.ant-layout-sider {
+  width: 200px !important;
+  min-width: 200px !important;
+}
+
+.ant-layout-sider-collapsed {
+  width: 80px !important;
+  min-width: 80px !important;
+}
+
+.ant-menu {
+  font-size: 12px !important;
+}
+
+.ant-menu-item {
+  height: 50px !important;
+  line-height: 50px !important;
+  padding: 0px 20px !important;
+}
+
+.ant-menu-item-icon {
+  font-size: 18px !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  background-color: #1890ff !important;
+  border-radius: 6px !important;
+}
+
+.ant-layout-content {
+  font-size: 18px !important;
+  padding: 24px !important;
+}
+
+/* ✅ Normalize Table Styles */
+.ant-table {
+  font-size: 18px !important;
+  border-radius: 10px !important;
+}
+
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td {
+  font-size: 18px !important;
+  padding: 12px 16px !important;
+}
+
+.ant-pagination {
+  font-size: 18px !important;
+}
+
+.ant-pagination-item {
+  min-width: 45px !important;
+  height: 45px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px !important;
+}
+
+.ant-pagination-item-active {
+  background-color: #1890ff !important;
+  border-color: #1890ff !important;
+}
+
+.ant-pagination-item-active a {
+  color: white !important;
+}
+
+.ant-pagination-options-size-changer .ant-select-selector {
+  height: 45px !important;
+  font-size: 18px !important;
+  padding: 0 14px !important;
+  display: flex;
+  align-items: center;
+}
+
+.ant-input,
+.ant-input-number,
+.ant-input-search,
+.ant-picker,
+.ant-select-selector {
+  height: 45px !important;
+  font-size: 18px !important;
+  padding: 0 14px !important;
+  border-radius: 6px !important;
+  display: flex;
+  align-items: center;
+}
+
+.ant-select-item {
+  font-size: 18px !important;
+  height: 45px !important;
+  padding: 0 14px !important;
+  display: flex;
+  align-items: center;
+}
+
+.ant-btn {
+  height: 45px !important;
+  font-size: 18px !important;
+  padding: 0 18px !important;
+  border-radius: 6px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-card {
+  font-size: 18px !important;
+  border-radius: 10px !important;
+}
+
+.ant-card-head-title {
+  font-size: 20px !important;
+}
+
+.ant-layout-footer {
+  font-size: 18px !important;
+  padding: 24px !important;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .ant-layout-sider {
+    width: 180px !important;
+  }
+
+  .ant-layout-content,
+  .ant-table {
+    font-size: 16px !important;
+  }
+
+  .ant-input,
+  .ant-input-number,
+  .ant-input-search,
+  .ant-picker,
+  .ant-select-selector,
+  .ant-btn,
+  .ant-pagination-item {
+    height: 40px !important;
+    font-size: 16px !important;
+  }
+
+  .ant-select-item,
+  .ant-pagination-options-size-changer .ant-select-selector {
+    height: 40px !important;
+    font-size: 16px !important;
+  }
+}

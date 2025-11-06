@@ -1,0 +1,126 @@
+.discounts-page {
+    background: #f9fafc;
+    min-height: 100vh;
+    padding: 16px;
+}
+
+.header {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.points-box .title {
+    font-size: 14px;
+    color: #666;
+}
+
+.points-box .points {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1e1e1e;
+}
+
+.my-rewards-btn {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-weight: 500;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0 12px;
+    padding-left: 4px;
+}
+
+.voucher-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.voucher-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.voucher-scroll-container {
+    overflow-x: auto;
+    padding: 10px 0 16px 0;
+}
+
+.voucher-scroll-row {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding-left: 4px;
+}
+
+.voucher-card-horizontal {
+    min-width: 240px;
+    max-width: 260px;
+    height: 200px; 
+    flex-shrink: 0;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.voucher-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.voucher-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: center;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 40px;
+}
+
+.voucher-code {
+    font-size: 14px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.voucher-details {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.redeem-button {
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.back-btn {
+    margin: 24px 0;
+    border-radius: 8px;
+}
+
+
+
