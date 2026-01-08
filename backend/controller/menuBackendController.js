@@ -55,8 +55,6 @@ exports.addMenuItem = async (req, res) => {
     }
 };
 
-
-// PUT flag item as unavailable
 exports.flagMenuItem = async (req, res) => {
     const { itemId } = req.params;
 
@@ -99,7 +97,6 @@ exports.updateStock = async (req, res) => {
     }
   };
 
-// DELETE menu item
 exports.deleteMenuItem = async (req, res) => {
     const { itemId } = req.params;
     try {

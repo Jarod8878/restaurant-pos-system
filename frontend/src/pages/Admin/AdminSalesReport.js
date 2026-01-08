@@ -325,7 +325,7 @@ const AdminSalesReport = () => {
                                 <ResponsiveContainer width="100%" height={400}>
                                     <PieChart>
                                         <Pie
-                                            data={categorySalesRevenue} // This should be revenue data
+                                            data={categorySalesRevenue}
                                             dataKey="value"
                                             nameKey="name"
                                             cx="50%"
@@ -346,7 +346,6 @@ const AdminSalesReport = () => {
                                 </ResponsiveContainer>
                             </Col>
 
-                            {/* Legend beside donut showing Quantity */}
                             <Col span={8} style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
                                 <h4>Sold Quantity</h4>
                                 {categorySalesQuantity.map((entry, index) => (
@@ -464,7 +463,6 @@ const AdminSalesReport = () => {
                                     }}
                                 />
                                 <Legend />
-                                {/* Area chart for Total Sales (left axis) */}
                                 <Area
                                     yAxisId="left"
                                     type="monotone"
@@ -474,7 +472,6 @@ const AdminSalesReport = () => {
                                     strokeWidth={3}
                                     name="Total Sales (RM)"
                                 />
-                                {/* Line chart for Sales Count (right axis) */}
                                 <Line
                                     yAxisId="right"
                                     type="monotone"

@@ -148,7 +148,6 @@ const CustomerRegisterMobile = () => {
                             )}
                         </div>
                     </div>
-                    {/* Strength meter */}
                     <div style={{ height: '6px', borderRadius: '4px', backgroundColor: '#ddd', marginTop: 4 }}>
                         <div
                             style={{

@@ -466,7 +466,6 @@ const AdminMenu = () => {
       )}
       <Card title="Add New Menu Item" style={{ marginBottom: 40 }}>
         <Row gutter={[16, 16]}>
-          {/* Name Input */}
           <Col xs={24} sm={12} md={8} lg={6} xl={4}>
             <Input
               placeholder="Name"
@@ -475,7 +474,6 @@ const AdminMenu = () => {
             />
           </Col>
 
-          {/* Description Input */}
           <Col xs={24} sm={12} md={8} lg={6} xl={4}>
             <Input
               placeholder="Description"
@@ -484,7 +482,6 @@ const AdminMenu = () => {
             />
           </Col>
 
-          {/* Price Input */}
           <Col xs={24} sm={12} md={8} lg={6} xl={4}>
             <Input
               type="number"
@@ -494,7 +491,6 @@ const AdminMenu = () => {
             />
           </Col>
 
-          {/* Stock Input */}
           <Col xs={24} sm={12} md={8} lg={6} xl={4}>
             <Input
               type="number"
@@ -504,7 +500,6 @@ const AdminMenu = () => {
             />
           </Col>
 
-          {/* Category Dropdown */}
           <Col xs={24} sm={12} md={8} lg={6} xl={4}>
             <Select
               placeholder="Category"
@@ -520,7 +515,6 @@ const AdminMenu = () => {
             </Select>
           </Col>
 
-          {/* Image Upload */}
           <Col xs={24} sm={12} md={8} lg={6} xl={4}>
             <Upload
               name="image"
@@ -547,7 +541,6 @@ const AdminMenu = () => {
             </Upload>
           </Col>
 
-          {/* Image Preview */}
           {newItem.image_url && (
             <Col span={3}>
               <img
@@ -558,7 +551,6 @@ const AdminMenu = () => {
             </Col>
           )}
 
-          {/* Add Button */}
           <Col span={3}>
             <Button
               type="primary"

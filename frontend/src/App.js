@@ -11,7 +11,7 @@ const App = () => {
     const [customerId, setCustomerId] = useState(() => localStorage.getItem("customerId") || "");
 
     useEffect(() => {
-        console.log("📦 customerId in App:", customerId);
+        console.log("customerId in App:", customerId);
       }, [customerId]);
 
     useEffect(() => {

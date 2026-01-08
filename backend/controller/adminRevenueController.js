@@ -1,9 +1,7 @@
 const db = require('../config/database');
 
-// ✅ Fetch Total Revenue (Month & Today)
 exports.getRevenue = async (req, res) => {
     try {
-        // ✅ Get Total Revenue for the Month
         const [monthResult] = await db.query(`
             SELECT SUM(total_price) AS totalRevenueMonth 
             FROM orders 
@@ -11,7 +9,6 @@ exports.getRevenue = async (req, res) => {
             AND YEAR(created_date_time) = YEAR(CURRENT_DATE());
         `);
 
-        // ✅ Get Today's Revenue
         const [todayResult] = await db.query(`
             SELECT SUM(total_price) AS totalRevenueToday 
             FROM orders 

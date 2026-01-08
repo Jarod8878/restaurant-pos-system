@@ -1,4 +1,3 @@
-//Fetches menu items from the API and initializes state
 export const fetchMenuItems = async (setMenuItems, setQuantities) => {
     try {
         const response = await fetch('http://localhost:3000/api/items');
@@ -7,10 +6,9 @@ export const fetchMenuItems = async (setMenuItems, setQuantities) => {
         const data = await response.json();
         const formattedItems = data.map((item) => ({
             ...item,
-            price: parseFloat(item.price) || 0, // Ensure price is a number
+            price: parseFloat(item.price) || 0, 
         }));
 
-        // Set menu items and initialize quantities
         setMenuItems(formattedItems);
 
         const initialQuantities = {};
@@ -23,7 +21,6 @@ export const fetchMenuItems = async (setMenuItems, setQuantities) => {
     }
 };
 
-//Increments the quantity of a menu item
 export const incrementQuantity = (itemId, setQuantities) => {
     setQuantities((prevQuantities) => ({
         ...prevQuantities,
@@ -31,7 +28,6 @@ export const incrementQuantity = (itemId, setQuantities) => {
     }));
 };
 
-//Decrements the quantity of a menu item (ensures it doesn't go below 0)
 export const decrementQuantity = (itemId, setQuantities) => {
     setQuantities((prevQuantities) => ({
         ...prevQuantities,
@@ -39,7 +35,6 @@ export const decrementQuantity = (itemId, setQuantities) => {
     }));
 };
 
-//Handles checkout: Filters selected items and navigates to cart page
 export const handleCheckout = (menuItems, quantities, setCart, navigate) => {
     const selectedItems = menuItems
         .filter((item) => (quantities[item.item_id] || 0) > 0)

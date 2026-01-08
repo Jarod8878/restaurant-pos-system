@@ -1,9 +1,7 @@
-// controller/uploadController.js
 const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
 
-// Configure Multer storage
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         const uploadDir = path.join(__dirname, "../uploads");
@@ -18,7 +16,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// Export middleware + handler
 exports.uploadMiddleware = upload.single("image");
 
 exports.handleImageUpload = (req, res) => {

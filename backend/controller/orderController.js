@@ -17,13 +17,13 @@ export const placeOrder = async (phoneNumber, cart, setOrderId, setCart, discoun
             item_id: item.item_id,
             quantity: item.quantity,
             total_price: parseFloat(item.total_price),
-            remarks: item.remarks || ''  // ✅ Send remarks if available
+            remarks: item.remarks || ''
         })),
         discountCode,
         discountAmount,
     };
 
-    console.log("Request Data Sent to Backend:", requestData); // Log the request data
+    console.log("Request Data Sent to Backend:", requestData); 
 
     try {
         const response = await axios.post("http://localhost:3000/api/orderPoints", requestData);
@@ -31,7 +31,7 @@ export const placeOrder = async (phoneNumber, cart, setOrderId, setCart, discoun
         if (response.data.orderId) {
             setOrderId(response.data.orderId);
             alert(response.data.message || "Order placed successfully!");
-            setCart([]); // Clear cart after order placement
+            setCart([]); 
         } else {
             console.error("Order ID is missing from response");
         }

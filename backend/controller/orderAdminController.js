@@ -1,6 +1,5 @@
 const db = require('../config/database');
 
-// ✅ Fetch all orders for Admin Dashboard (with customerName)
 exports.getAllOrders = async (req, res) => {
     try {
         const [results] = await db.query(`
@@ -21,7 +20,6 @@ exports.getAllOrders = async (req, res) => {
             ORDER BY o.created_date_time DESC;
         `);
 
-        // ✅ Ensure proper formatting in response
         const formattedOrders = results.map(order => ({
             ...order,
             total_price: order.total_price ? parseFloat(order.total_price).toFixed(2) : "0.00",

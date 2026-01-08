@@ -182,7 +182,6 @@ const Dashboard = () => {
         </Card>
 
         <Row gutter={[16, 16]} style={{ marginTop: "16px" }}>
-          {/*Sales Breakdown by Category */}
           <Col span={12}>
             <Card title="Sales Breakdown by Category">
               <Row gutter={[16, 16]}>
@@ -205,7 +204,6 @@ const Dashboard = () => {
             </Card>
           </Col>
 
-          {/*Customer Feedback */}
           <Col span={12}>
             <Card title="Customer Feedback" style={{ height: "330px", overflowY: "auto" }}>
               <List
@@ -221,7 +219,6 @@ const Dashboard = () => {
         </Row>
 
         <Row gutter={[16, 16]} style={{ marginTop: "16px" }}>
-          {/*Top Selling Item */}
           <Col span={12}>
             <Card title="Top Selling Items">
               {Array.isArray(topSellingItems) && topSellingItems.length > 0 ? (
@@ -239,7 +236,6 @@ const Dashboard = () => {
             </Card>
           </Col>
 
-          {/*Top Customers by Membership Points */}
           <Col span={12}>
             <Card title="Top Customers">
               <List

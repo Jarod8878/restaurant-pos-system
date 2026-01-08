@@ -115,7 +115,6 @@ const CustomerLoginMobile = ({ setCustomerId, setPhoneNumber }) => {
                     </div>
                 </div>
 
-                {/* Login Button */}
                 <Button
                     block
                     color="primary"
@@ -126,7 +125,6 @@ const CustomerLoginMobile = ({ setCustomerId, setPhoneNumber }) => {
                     {loading ? <SpinLoading color="white" /> : 'Login as Guest'}
                 </Button>
 
-                {/* Register*/}
                 <div style={{ textAlign: 'center', marginTop: 16 }}>
                     <span style={{ color: '#888' }}>Don't have an account?</span><br />
                     <Button color="warning" fill="none" onClick={() => navigate('/registerMobile')} size="small">

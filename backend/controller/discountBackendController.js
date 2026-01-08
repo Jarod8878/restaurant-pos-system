@@ -11,7 +11,6 @@ exports.getDiscount = async (req, res) => {
     }
 };
 
-// Redeem a discount (Deduct membership points & return discount code)
 exports.redeemDiscount = async (req, res) => {
     console.log("redeemDiscount controller activated", req.body);
     const { customerId, discountId } = req.body;

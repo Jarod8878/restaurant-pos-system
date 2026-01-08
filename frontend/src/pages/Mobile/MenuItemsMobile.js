@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import {
-    Card, Image, Typography, Row, Col,
-    Button, Modal, message, Tabs, Checkbox
-} from 'antd';
+import { Card, Image, Typography, Row, Col, Button, Modal, message, Tabs, Checkbox} from 'antd';
 import { ShoppingCartOutlined, PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import NavbarMobile from './navbarMobile';
 import '../../CSS/MenuItemsMobile.css';
@@ -199,7 +196,6 @@ const MenuItemsMobile = ({ setCart }) => {
                             </div>
                         )}
 
-                        {/* Quantity Controls */}
                         {(() => {
                             const key = `${modalItem.item_id}_${modalItem.remarks || ''}`;
                             const quantity = quantities[key] || 0;
@@ -223,7 +219,6 @@ const MenuItemsMobile = ({ setCart }) => {
                             );
                         })()}
 
-                        {/* Add to Cart */}
                         <Button
                             block
                             type="primary"
@@ -261,7 +256,6 @@ const MenuItemsMobile = ({ setCart }) => {
                                 setCart(newCart);
                                 localStorage.setItem("cart", JSON.stringify(newCart));
 
-                                // Reset quantity for this variant
                                 setQuantities(prev => ({ ...prev, [key]: 0 }));
 
                                 message.success("Item added to cart!");
@@ -275,7 +269,6 @@ const MenuItemsMobile = ({ setCart }) => {
                 )}
             </Modal>
 
-            {/* Checkout Button */}
             <div style={{
                 position: 'fixed',
                 bottom: 80,
