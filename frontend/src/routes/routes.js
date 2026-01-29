@@ -27,7 +27,7 @@ import FeedbackMobile from '../pages/Mobile/FeedbackMobile.js';
 import DiscountRewardsMobile from '../pages/Mobile/DiscountRewardsMobile.js';
 
 const routes = [
-    //Public Routes (No Layout)
+    //Public Routes
     { path: "/", element: <MainPage /> },
     { path: "/admin-login", element: <AdminLogin /> },
 

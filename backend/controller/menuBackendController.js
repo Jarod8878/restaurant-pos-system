@@ -65,8 +65,8 @@ exports.flagMenuItem = async (req, res) => {
             return res.status(404).json({ error: "Menu item not found" });
         }
 
-        const currentStatus = rows[0].is_available; // 0 or 1
-        const newStatus = currentStatus === 1 ? 0 : 1; // Force MySQL-friendly boolean
+        const currentStatus = rows[0].is_available;
+        const newStatus = currentStatus === 1 ? 0 : 1; 
 
         await db.query("UPDATE menuitems SET is_available = ? WHERE item_id = ?", [newStatus, itemId]);
 

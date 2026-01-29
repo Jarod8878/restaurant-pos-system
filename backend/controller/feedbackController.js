@@ -35,8 +35,6 @@ exports.submitFeedback = async (req, res) => {
     }
 };
 
-
-
 exports.getAllFeedbacks = async (req, res) => {
     try {
         const [results] = await db.query(`

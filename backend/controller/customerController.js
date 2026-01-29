@@ -41,16 +41,16 @@ exports.forgotPassword = async (req, res) => {
             return res.status(404).json({ success: false, message: 'Email not found' });
         }
 
-        // Generate temporary password (8 characters, alphanumeric)
+        // Generate temporary password
         const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
         const tempPassword = Array.from({ length: 8 }, () =>
             charset[Math.floor(Math.random() * charset.length)]
         ).join('');
 
-        // Update the customer password
+        // Update customer password
         await db.query('UPDATE customer SET password = ? WHERE email = ?', [tempPassword, email]);
 
-        // Send the temporary password to user email
+        // Send temporary password to email
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -127,7 +127,6 @@ exports.updateProfile = async (req, res) => {
             return res.status(409).json({ success: false, message: 'Email already in use by another account' });
         }
 
-        //Check if phoneNumber is already used by another customer
         const [existing] = await db.query(
             'SELECT customerId FROM customer WHERE phoneNumber = ? AND customerId != ?',
             [phoneNumber, customerId]
@@ -137,7 +136,6 @@ exports.updateProfile = async (req, res) => {
             return res.status(409).json({ success: false, message: 'Phone number already in use by another account' });
         }
 
-        //update
         let query = 'UPDATE customer SET customerName = ?, email = ?, phoneNumber = ?';
         let params = [customerName, email, phoneNumber];
 

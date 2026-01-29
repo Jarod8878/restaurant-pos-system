@@ -11,11 +11,11 @@ const {
 
 const router = express.Router();
 
-// 📌 Fetch menu items and categories
+// Fetch menu items and categories
 router.get("/", getMenuItems);
 router.get("/categories", getCategories);
 
-// 📌 Admin actions
+// Admin actions
 router.post("/menu-items", addMenuItem);
 router.put("/menu-items/:itemId/flag", flagMenuItem);
 router.delete("/menu-items/:itemId", deleteMenuItem);
